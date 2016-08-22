@@ -17,5 +17,5 @@ Please note that this is just an example; in a real life product, results should
 
 #Credentials
 
-Please contact `developer_support` at `servizist.it` to request your access credentials.
+Please contact `developer-support` at `servizist.it` to request your access credentials.
 
