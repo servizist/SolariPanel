@@ -3,8 +3,7 @@
 This is a minimalistic example that shows how to use the TransitServer SDK (available here on GitHub) to query for realtime transit data.
 
 The project is built combining a very simple [Play!](https://www.playframework.com/) controller, and the FogCreek [Solari Board](https://github.com/FogCreek/solari-board).
-
-The board is re-purposed back to its original goal.
+The board is re-purposed back to its original goal: display arrival and departure data for bus and train stations :)
 
 An example displaying BUS arrival data for the Bolzano central station (waypoint id 1000)
 ![](http://i.imgur.com/oseIEvS.png)
