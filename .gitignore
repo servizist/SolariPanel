@@ -1,0 +1,8 @@
+target/*
+activator*
+project/target*
+project/project/target*
+conf/application.conf$
+logs/*
+.idea/*
+.hg/*
