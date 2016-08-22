@@ -11,7 +11,7 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   "it.sad.sii" % "RestClient" % "1.0",
-  "it.sad.sii" % "TransitSDK" % "1.1"
+  "it.sad.sii" % "TransitSDK" % "1.2.1"
 )
 
 resolvers += Resolver.mavenLocal
