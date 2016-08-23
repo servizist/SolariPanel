@@ -35,7 +35,7 @@ The project uses Play!, which in turn uses `sbt` for build and dependecies manag
 
 Dependecies are automatically resolved; the only two libraries you need to handle yourself are the one we provide: [TransitServerSDK](https://github.com/servizist/TransitServerSDK/) and [RestClient](https://github.com/servizist/RestClient).
 
-These projects are build with Maven. You just need to follow the usual steps:
+These projects are built with Maven. You just need to follow the usual steps:
 
     ldematte@client13-207:/projects/RestClient$ mvn install
 
