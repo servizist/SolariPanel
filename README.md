@@ -34,6 +34,8 @@ Substitute `<your_username>` and `<your_password>` with your new credentials.
 A test-only (fake) waypoint is available on the panel/on TransitServer. Just use "test" (`http://localhost:9000/departures/test` or `http://localhost:9000/arrivals/test`) as the waypoint ID.
 This test request does not provide real data, but it does not need authentication either.
 
+![](http://i.imgur.com/xuipd6f.png)
+
 ##Build
 
 The project uses Play!, which in turn uses `sbt` for build and dependecies management.
