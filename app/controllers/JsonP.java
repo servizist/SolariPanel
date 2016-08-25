@@ -28,8 +28,7 @@ import static play.libs.Jsonp.jsonp;
  */
 public class JsonP extends Controller {
 
-    public Result getDepartures(String callback, Integer waypoint) {
-
+    public Result getDepartures(String callback, String waypoint) {
 
         Config conf = ConfigFactory.load();
         String transitServiceBaseURL =
@@ -39,9 +38,14 @@ public class JsonP extends Controller {
         String transitServicePassword =
                 conf.getString("transit_service.password");
 
-        String nextDeparturesAction = "/departures/" + waypoint + "/until";
-        String response = "";
+        String nextDeparturesAction;
 
+        if (waypoint.equals("test"))
+            nextDeparturesAction = "/hello/departures/until";
+        else
+            nextDeparturesAction = "/departures/" + waypoint + "/until";
+
+        String response;
         try {
             RestClient client =
                     new RestClient(transitServiceBaseURL, transitServiceUsername,
@@ -109,8 +113,7 @@ public class JsonP extends Controller {
     }
 
 
-    public Result getArrivals(String callback, Integer waypoint) {
-
+    public Result getArrivals(String callback, String waypoint) {
 
         Config conf = ConfigFactory.load();
         String transitServiceBaseURL =
@@ -120,15 +123,19 @@ public class JsonP extends Controller {
         String transitServicePassword =
                 conf.getString("transit_service.password");
 
-        String nextDeparturesAction = "/arrivals/" + waypoint + "/until";
-        String response = "";
+        String nextArrivalsAction;
+        if (waypoint.equals("test"))
+            nextArrivalsAction = "/hello/arrivals/until";
+        else
+            nextArrivalsAction = "/arrivals/" + waypoint + "/until";
 
+        String response;
         try {
             RestClient client =
                     new RestClient(transitServiceBaseURL, transitServiceUsername,
                             transitServicePassword, 60, null);
 
-            response = client.get(transitServiceBaseURL + nextDeparturesAction);
+            response = client.get(transitServiceBaseURL + nextArrivalsAction);
 
         } catch (URISyntaxException e) {
             e.printStackTrace();

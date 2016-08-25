@@ -5,8 +5,8 @@
 # Home page
 GET     /arrivals/*waypoint         controllers.Application.index(waypoint: String)
 GET     /departures/*waypoint         controllers.Application.index(waypoint: String)
-GET     /getJsonPDepartures/*waypoint         controllers.JsonP.getDepartures(callback: String, waypoint: Integer)
-GET     /getJsonPArrivals/*waypoint           controllers.JsonP.getArrivals(callback: String, waypoint: Integer)
+GET     /getJsonPDepartures/*waypoint         controllers.JsonP.getDepartures(callback: String, waypoint: String)
+GET     /getJsonPArrivals/*waypoint           controllers.JsonP.getArrivals(callback: String, waypoint: String)
 
 
 # Map static resources from the /public folder to the /assets URL path

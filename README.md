@@ -15,7 +15,12 @@ Another one displaying TRAIN arrival data for the Bolzano central station (waypo
 
 Please note that this is just an example; in a real life product, results should be cached. Possibly, if there are multiple monitors displaying the same arrival or departure information, they should point to the same server; callint the TransitServer directly is possible, but not suggested (the server applies rate limiting, so you may run into the rate limitator if you exceed the default 60 requests per minute).
 
-#Credentials
+#Access credentials
 
 Please contact `developer_support` at `servizist.it` to request your access credentials.
+
+##Test
+
+A test-only (fake) waypoint is available on the panel/on TransitServer. Just use "test" (`http://localhost:9000/departures/test` or `http://localhost:9000/arrivals/test`) as the waypoint ID.
+This test request does not provide real data, but it does not need authentication either.
 
